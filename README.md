@@ -14,4 +14,6 @@ getSameParity([2, 2, 8]); // [2, 2, 8]
 - Если на вход функции передан пустой массив, то она должна вернуть пустой массив.
 - Для работы с отрицательными числами может понадобиться функция нахождения модуля **Math.abs**
 
+[РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_remove-elements/script.js)
+
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
