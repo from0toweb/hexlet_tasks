@@ -1,4 +1,4 @@
 # Практические задачи с HEXLET
 
 ### Массивы
-- <a href="https://from0toweb.github.io/repair-design/src/">for of</a>
+- <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_for-of">for of</a>
