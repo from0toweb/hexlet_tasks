@@ -1,4 +1,4 @@
-### arrays.js
+
 
 Реализуйте и экспортируйте по умолчанию функцию, которая высчитывает среднее арифметическое элементов переданного массива. Благодаря этой функции мы наконец-то посчитаем среднюю температуру по больнице :)
 
@@ -10,13 +10,13 @@ calculateAverage(temperatures1); // 38.5
 const temperatures2 = [36, 37.4, 39, 41, 36.6];
 calculateAverage(temperatures2); // 38
 ```
-В случае пустого массива функция должна вернуть значение null (используйте в коде для этого **guard expression**):
+В случае пустого массива функция должна вернуть значение null:
 
 ```
 const temperatures = [];
 calculateAverage(temperatures); // null
 ```
 
-[РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_for-of/script.js)
+[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_for-of/script.js)
 
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
