@@ -1,13 +1,6 @@
-### arrays.js
-
 Реализуйте и экспортируйте по умолчанию функцию, которая принимает на вход в виде массива кошелёк с деньгами и название валюты и возвращает сумму денег указанной валюты.
 
 Реализуйте данную функцию используя управляющие инструкции.
-
-Параметры функции:
-
-- Массив, содержащий купюры разных валют с различными номиналами
-- Наименование валюты
 
 ## Примеры
 ```
@@ -26,16 +19,9 @@ const money3 = [
 ];
 getTotalAmount(money3, 'rub') // 270
 ```
-## Подсказки
-- Названия валют состоят из 3-х символов.
-- Для извлечения подстроки из строки используйте метод slice().
-```
-const str = 'some text';
-str.slice(1, 6); // 'ome t'
-str.slice(7);    // 'xt'
-```
 
-[РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_break-continue/script.js)
+
+[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_break-continue/script.js)
 
 
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
