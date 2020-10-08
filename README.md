@@ -1,5 +1,3 @@
-### arrays.js
-
 Реализуйте функцию getSameParity, которая принимает на вход массив чисел и возвращает новый, состоящий из элементов, у которых такая же чётность, как и у первого элемента входного массива. Экспортируйте функцию по умолчанию.
 
 ## Примеры
@@ -9,11 +7,8 @@ getSameParity([1, 2, 3]); // [1, 3]
 getSameParity([1, 2, 8]); // [1]
 getSameParity([2, 2, 8]); // [2, 2, 8]
 ```
-## Подсказки
-- Проверка чётности - остаток от деления: **item % 2 === 0** — чётное число.
-- Если на вход функции передан пустой массив, то она должна вернуть пустой массив.
-- Для работы с отрицательными числами может понадобиться функция нахождения модуля **Math.abs**
 
-[РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_remove-elements/script.js)
+
+[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_remove-elements/script.js)
 
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
