@@ -1,19 +1,19 @@
-const temperatures1 = [ 37.5, 34, 39.3, 40, 38.7, 41.5 ];
-const temperatures2 = [ 36, 37.4, 39, 41, 36.6 ];
-const temperatures = [];
-
-const calculateAverage = arr => {
-	let result = 0;
+const getSameParity = arr => {
+	let evenNumber = Math.abs(arr[0]) % 2;
+	let result = [];
 
 	if (arr.length) {
 		for (const elem of arr) {
-			result += elem;
+			if (Math.abs(elem) % 2 === evenNumber) {
+				result.push(elem);
+			}
 		}
-		return result / arr.length;
 	}
-	return null;
+
+	return result;
 };
 
-console.log(calculateAverage(temperatures1));
-console.log(calculateAverage(temperatures2));
-console.log(calculateAverage(temperatures));
+console.log(getSameParity([]));
+console.log(getSameParity([ 1, 2, 3 ]));
+console.log(getSameParity([ 1, 2, 8 ]));
+console.log(getSameParity([ 2, 2, 8 ]));
