@@ -16,3 +16,5 @@ calculateAverage(temperatures2); // 38
 const temperatures = [];
 calculateAverage(temperatures); // null
 ```
+
+[&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
