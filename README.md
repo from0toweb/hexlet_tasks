@@ -17,4 +17,6 @@ const temperatures = [];
 calculateAverage(temperatures); // null
 ```
 
+[РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_for-of/script.js)
+
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
