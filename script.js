@@ -1,23 +1,19 @@
-const scores = [ [ 3, 2 ], [ 4, 1 ], [ 5, 8 ], [ 5, 5 ], [ 2, 2 ], [ 2, 4 ], [ 4, 2 ], [ 2, 3 ] ];
+const definitions = [
+	[ 'Блямба', 'Выпуклость, утолщения на поверхности чего-либо' ],
+	[ 'Бобр', 'Животное из отряда грызунов' ]
+];
 
-const getSuperSeriesWinner = scores => {
-	let result = 0;
+const buildDefinitionList = definitions => {
+	if (definitions.length === 0) {
+		return '';
+	}
+	let newArr = [];
 
-	for (let i = 0; i < scores.length; i += 1) {
-		if (scores[i][0] < scores[i][1]) result += 1;
-		if (scores[i][0] > scores[i][1]) result += -1;
-		if (scores[i][0] === scores[i][1]) result += 0;
+	for (const elem of definitions) {
+		newArr.push(`<dt>${elem[0]}</dt><dd>${elem[1]}</dd>`);
 	}
 
-	if (Math.sign(result) > 0) {
-		return 'ussr';
-	}
-	if (Math.sign(result) < 0) {
-		return 'canada';
-	}
-	if (Math.sign(result) === 0) {
-		return null;
-	}
+	const resultArr = newArr.join('');
+	return `<dl>${resultArr}</dl>`;
 };
-
-console.log(getSuperSeriesWinner(scores));
+console.log(buildDefinitionList(definitions));
