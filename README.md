@@ -35,7 +35,7 @@ str.slice(1, 6); // 'ome t'
 str.slice(7);    // 'xt'
 ```
 
-[РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_break-continue/script.js)
+[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_break-continue/script.js)
 
 
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
