@@ -1,22 +1,23 @@
-const money1 = [ 'eur 10', 'usd 1', 'usd 10', 'rub 50', 'usd 5' ];
-const money2 = [ 'eur 10', 'usd 1', 'eur 5', 'rub 100', 'eur 20', 'eur 100', 'rub 200' ];
-const money3 = [ 'eur 10', 'rub 50', 'eur 5', 'rub 10', 'rub 10', 'eur 100', 'rub 200' ];
+const scores = [ [ 3, 2 ], [ 4, 1 ], [ 5, 8 ], [ 5, 5 ], [ 2, 2 ], [ 2, 4 ], [ 4, 2 ], [ 2, 3 ] ];
 
-const getTotalAmount = (arr, currency) => {
+const getSuperSeriesWinner = scores => {
 	let result = 0;
 
-	for (const elem of arr) {
-		const elemCurrency = elem.slice(0, 3);
-		const elemValue = elem.slice(4);
-
-		if (elemCurrency !== currency) {
-			continue;
-		}
-		result += +elemValue;
+	for (let i = 0; i < scores.length; i += 1) {
+		if (scores[i][0] < scores[i][1]) result += 1;
+		if (scores[i][0] > scores[i][1]) result += -1;
+		if (scores[i][0] === scores[i][1]) result += 0;
 	}
-	return result;
+
+	if (Math.sign(result) > 0) {
+		return 'ussr';
+	}
+	if (Math.sign(result) < 0) {
+		return 'canada';
+	}
+	if (Math.sign(result) === 0) {
+		return null;
+	}
 };
 
-console.log(getTotalAmount(money1, 'usd'));
-console.log(getTotalAmount(money2, 'eur'));
-console.log(getTotalAmount(money3, 'rub'));
+console.log(getSuperSeriesWinner(scores));
