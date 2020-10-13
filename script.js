@@ -1,19 +1,24 @@
-const definitions = [
-	[ 'Блямба', 'Выпуклость, утолщения на поверхности чего-либо' ],
-	[ 'Бобр', 'Животное из отряда грызунов' ]
-];
+const sentence = 'When you play the game of thrones, you win or you die';
+const sentence2 = 'chicken chicken? chicken! chicken';
 
-const buildDefinitionList = definitions => {
-	if (definitions.length === 0) {
-		return '';
-	}
-	let newArr = [];
+const makeCensored = (sentence, arr) => {
+	let newArr = sentence.split(' ');
 
-	for (const elem of definitions) {
-		newArr.push(`<dt>${elem[0]}</dt><dd>${elem[1]}</dd>`);
+	for (let i = 0; i < newArr.length; i += 1) {
+		if (newArr[i] === arr[0] || newArr[i] === arr[1]) {
+			newArr[i] = '$#%!';
+		}
 	}
 
-	const resultArr = newArr.join('');
-	return `<dl>${resultArr}</dl>`;
+	const newStr = newArr.join(' ');
+
+	return newStr;
 };
-console.log(buildDefinitionList(definitions));
+
+const result = makeCensored(sentence, [ 'die', 'play' ]);
+// When you $#%! the game of thrones, you win or you $#%!
+const result2 = makeCensored(sentence2, [ '?', 'chicken' ]);
+// '$#%! chicken? chicken! $#%!';
+
+console.log(result);
+console.log(result2);

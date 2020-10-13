@@ -1,17 +1,23 @@
-Реализуйте функцию buildDefinitionList(), которая генерирует HTML список определений (теги ```<dl>```, ```<dt>``` и ```<dd>```) и возвращает получившуюся строку. При отсутствии элементов в массиве функция возвращает пустую строку.
+Реализуйте и экспортируйте по умолчанию функцию, которая заменяет каждое вхождение указанных слов в предложении на последовательность ```$#%!``` и возвращает полученную строку.
+
+Аргументы:
+- Текст
+- Набор стоп слов
+
+Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).
 
 ## Примеры
 ```
-const definitions = [
-  ['Блямба', 'Выпуклость, утолщения на поверхности чего-либо'],
-  ['Бобр', 'Животное из отряда грызунов'],
-];
+const sentence = 'When you play the game of thrones, you win or you die';
+const result = makeCensored(sentence, ['die', 'play']);
+// When you $#%! the game of thrones, you win or you $#%!
 
-buildDefinitionList(definitions);
-// '<dl><dt>Блямба</dt><dd>Выпуклость, утолщение на поверхности чего-либо</dd><dt>Бобр</dt><dd>Животное из отряда грызунов</dd></dl>';
+const sentence2 = 'chicken chicken? chicken! chicken';
+const result2 = makeCensored(sentence2, ['?', 'chicken']);
+// '$#%! chicken? chicken! $#%!';
 ```
 
-[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_generate-string/script.js)
+[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_string-processing/script.js)
 
 
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
