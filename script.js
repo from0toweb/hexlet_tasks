@@ -1,24 +1,14 @@
-const sentence = 'When you play the game of thrones, you win or you die';
-const sentence2 = 'chicken chicken? chicken! chicken';
+import _ from 'lodash';
 
-const makeCensored = (sentence, arr) => {
-	let newArr = sentence.split(' ');
+export default (arr1, arr2) => {
+    let result = [];
 
-	for (let i = 0; i < newArr.length; i += 1) {
-		if (newArr[i] === arr[0] || newArr[i] === arr[1]) {
-			newArr[i] = '$#%!';
-		}
-	}
-
-	const newStr = newArr.join(' ');
-
-	return newStr;
+    for (const elem of _.uniq(arr1)) {
+        for (const elem2 of _.uniq(arr2)) {
+            if (elem === elem2) {
+                result.push(elem);
+            }
+        }
+    }
+    return result.length;
 };
-
-const result = makeCensored(sentence, [ 'die', 'play' ]);
-// When you $#%! the game of thrones, you win or you $#%!
-const result2 = makeCensored(sentence2, [ '?', 'chicken' ]);
-// '$#%! chicken? chicken! $#%!';
-
-console.log(result);
-console.log(result2);

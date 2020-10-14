@@ -1,23 +1,23 @@
-Реализуйте и экспортируйте по умолчанию функцию, которая заменяет каждое вхождение указанных слов в предложении на последовательность ```$#%!``` и возвращает полученную строку.
+Реализуйте и экспортируйте по умолчанию функцию принимающую на вход два массива и возвращающую количество общих уникальных значений в обоих массивах.
 
-Аргументы:
-- Текст
-- Набор стоп слов
-
-Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).
+Для получения массива без повторяющихся элементов, используйте ```uniq``` из библиотеки ```lodash```.
 
 ## Примеры
 ```
-const sentence = 'When you play the game of thrones, you win or you die';
-const result = makeCensored(sentence, ['die', 'play']);
-// When you $#%! the game of thrones, you win or you $#%!
+// Общие повторяющиеся элементы: 1, 3, 2
+getSameCount([1, 3, 2, 2], [3, 1, 1, 2, 5]); // 3
 
-const sentence2 = 'chicken chicken? chicken! chicken';
-const result2 = makeCensored(sentence2, ['?', 'chicken']);
-// '$#%! chicken? chicken! $#%!';
+// Общие повторяющиеся элементы: 4
+getSameCount([1, 4, 4], [4, 8, 4]); // 1
+
+// Общие повторяющиеся элементы: 1, 10
+getSameCount([1, 10, 3], [10, 100, 35, 1]); // 2
+
+// Нет элементов
+getSameCount([], []); // 0
 ```
 
-[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_string-processing/script.js)
+[МОЕ РЕШЕНИЕ](https://github.com/from0toweb/hexlet_tasks/blob/arrayTask_nested-loops/script.js)
 
 
 [&#x2190; Назад](https://github.com/from0toweb/hexlet_tasks/tree/master)
