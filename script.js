@@ -1,23 +1,28 @@
-const text1 = 'yyab'; // y, a, b
-const text2 = 'You know nothing Jon Snow';
-// Если передана пустая строка, то функция должна вернуть `0`
-const text3 = '';
 
 
-const countUniqChars = (text) => {
-    if (text === '') 0
+const bubbleSort = (arr) => {
+    let count = arr.length - 1;
 
-    let result = [];
+    let a;
 
-    for (let i = 0; i < text.length; i += 1) {
-        if (!result.includes(text[i])) {
-            result.push(text[i])
+    do {
+        a = false;
+
+        for (let i = 0; i < count; i += 1) {
+            if (arr[i] > arr[i + 1]) {
+                let num = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = num;
+
+                a = true;
+            }
         }
-    }
+        count -= 1;
+    } while (a)
 
-    return result.length;
+    return arr;
 };
 
-console.log(countUniqChars(text1)); // 3
-console.log(countUniqChars(text2)); // 13
-console.log(countUniqChars(text3)); // 0
+console.log(bubbleSort([3, 2 ,0 ,10 ,-2]));
+console.log(bubbleSort([3, 10, 4, 3]));
+console.log(bubbleSort([]));
