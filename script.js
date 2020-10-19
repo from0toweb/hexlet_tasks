@@ -1,14 +1,23 @@
-import _ from 'lodash';
+const text1 = 'yyab'; // y, a, b
+const text2 = 'You know nothing Jon Snow';
+// Если передана пустая строка, то функция должна вернуть `0`
+const text3 = '';
 
-export default (arr1, arr2) => {
+
+const countUniqChars = (text) => {
+    if (text === '') 0
+
     let result = [];
 
-    for (const elem of _.uniq(arr1)) {
-        for (const elem2 of _.uniq(arr2)) {
-            if (elem === elem2) {
-                result.push(elem);
-            }
+    for (let i = 0; i < text.length; i += 1) {
+        if (!result.includes(text[i])) {
+            result.push(text[i])
         }
     }
+
     return result.length;
 };
+
+console.log(countUniqChars(text1)); // 3
+console.log(countUniqChars(text2)); // 13
+console.log(countUniqChars(text3)); // 0
