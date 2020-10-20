@@ -1,28 +1,28 @@
+const getIntersectionOfSortedArrays = (arr1, arr2) => {
+    const result = [];
+    const count = arr1.length + arr2.length;
+    let arr1Ind = 0;
+    let arr2Ind = 0;
 
-
-const bubbleSort = (arr) => {
-    let count = arr.length - 1;
-
-    let a;
-
-    do {
-        a = false;
-
-        for (let i = 0; i < count; i += 1) {
-            if (arr[i] > arr[i + 1]) {
-                let num = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = num;
-
-                a = true;
-            }
+    for (let i = 0; i < count; i += 1) {
+        if (arr1[arr1Ind] === arr2[arr2Ind]) {
+            result.push(arr1[arr1Ind]);
+            arr1Ind += 1;
+            arr2Ind += 1;
         }
-        count -= 1;
-    } while (a)
+        if (arr1[arr1Ind] > arr2[arr2Ind]) {
+            arr2Ind += 1;
+        }
+        if (arr1[arr1Ind] < arr2[arr2Ind]) {
+            arr1Ind += 1;
+        }
 
-    return arr;
+    }
+
+    return result;
 };
 
-console.log(bubbleSort([3, 2 ,0 ,10 ,-2]));
-console.log(bubbleSort([3, 10, 4, 3]));
-console.log(bubbleSort([]));
+
+console.log(getIntersectionOfSortedArrays([10, 11, 24], [10, 13, 14, 18, 24, 30]));
+console.log(getIntersectionOfSortedArrays([10, 11, 24], [-2, 3, 4]));
+console.log(getIntersectionOfSortedArrays([10, 12, 19, 21], [3, 5, 10]));
