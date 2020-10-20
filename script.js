@@ -1,30 +1,36 @@
-const openingSymbols = ['(', '[', '{', '<'];
-const closingSymbols = [')', ']', '}', '>'];
+const locations = [
+    ["Park", [10, 5]],
+    ["Sea", [1, 3]],
+    ["Museum", [8, 4]],
+];
 
+const currentPoint = [1, 3];
 
-export default (expression) => {
+const getDistance = ([x1, y1], [x2, y2]) => {
+    const xs = x2 - x1;
+    const ys = y2 - y1;
 
-    const stack = [];
-
-
-    for (const symbol of expression) {
-        const lastSymbol = stack[stack.length - 1]
-
-
-        if (openingSymbols.indexOf(symbol) !== -1) {
-            stack.push(symbol);
-        } else if (closingSymbols.indexOf(symbol) === openingSymbols.indexOf(lastSymbol))  {
-            stack.pop();
-        } else {
-            return false;
-        }
-    }
-
-    return stack.length === 0;
+    return Math.sqrt(xs ** 2 + ys ** 2);
 };
 
+const getTheNearestLocation = (location, point) => {
+    if (!location.length) {
+        return null;
+    }
+    const [[, firstPoint], ,] = location;
+    let resultPoint = getDistance(point, firstPoint);
+    let result;
 
-console.log(isBracketStructureBalanced('(>'))
-console.log(isBracketStructureBalanced('()'))
-console.log(isBracketStructureBalanced('[()]'))
-console.log(isBracketStructureBalanced('{<>}}'))
+    for (const loc of location) {
+        const [, pointLoc] = loc;
+
+        if (getDistance(point, pointLoc) < resultPoint) {
+            resultPoint = getDistance(point, pointLoc);
+            result = loc;
+        }
+    }
+    return result;
+};
+
+console.log(getTheNearestLocation([], currentPoint));
+console.log(getTheNearestLocation(locations, currentPoint));
