@@ -12,6 +12,7 @@
 - <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_buble-sort">Сортировка массивов</a>
 - <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_big-o">BIG O</a>
 - <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_stack">Стэк</a>
+- <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_destructuring">Деструктуризация</a>
 
 
 ### React
