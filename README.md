@@ -14,6 +14,7 @@
 - <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_stack">Стэк</a>
 - <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_destructuring">Деструктуризация</a>
 - <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_rest-operator">Rest-оператор</a>
+- <a href="https://github.com/from0toweb/hexlet_tasks/tree/arrayTask_spread-operator">Spread-оператор</a>
 
 
 ### React
