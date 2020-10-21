@@ -1,17 +1,21 @@
-const getMax = arr => {
+const flatten = arr => {
     if (!arr.length) {
-        return null;
+        return arr;
     }
 
-    let [min, ...newArr] = arr;
+    let result = [];
 
-    for (const element of newArr) {
-        if (element > min) {
-            min = element;
+    for (const element of arr) {
+        if (Array.isArray(element)) {
+            result = [...result, ...element];
+        } else {
+            result = [...result, element];
         }
     }
-    return min;
+
+    return result;
 };
 
-console.log(getMax([]));
-console.log(getMax([1, 10, 8]));
+console.log(flatten([]));
+console.log(flatten([1, [3, 2], 9]));
+console.log(flatten([1, [[2], [3]], [9]]));
